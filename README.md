@@ -4,10 +4,14 @@
 Tėvukas gali daug! 
 
 ## Komandos
-` /padėk ` - Įvardija komandas \n
-` /bajeriuka ` - Šauna bajeriuką \n
-` /pls-rep ` - Leidžia rinkt reputaciją su tėvu \n
-` /baliukas ` - Groja balių muziką tarp vc \n
+` /padėk ` - Įvardija komandas
+
+` /bajeriuka ` - Šauna bajeriuką
+
+` /pls-rep ` - Leidžia rinkt reputaciją su tėvu
+
+` /baliukas ` - Groja balių muziką tarp vc
+
 
 **Ir kita!**
 
