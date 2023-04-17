@@ -36,7 +36,7 @@ client.on('ready', (c) => {
 schedule.scheduleJob('0 0 * * *', () => {
     const date = new Date();
     const day = date.getDay();
-    switch (expr){
+    switch (day){
         case 0:
             console.log("Sekmadienis")
             client.user.setActivity({
