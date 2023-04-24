@@ -1,7 +1,6 @@
 require('dotenv').config();
 const {Client, IntentsBitField, ActivityType, EmbedBuilder, GuildMember, ButtonBuilder, ActionRowBuilder, ButtonStyle} = require('discord.js');
-const { VoiceConnectionStatus} = require('@discordjs/voice');
-const {Player, useQueue, QueryTypem, useHistory} = require("discord-player")
+const {Player} = require("discord-player")
 const schedule = require('node-schedule')
 
 //ERROR
@@ -30,12 +29,13 @@ const player = new Player(client);
 //READY
 client.on('ready', (c) => {
     //console.log(client)
-    console.log(`${c.user.username} V1.1`);
+    console.log(`${c.user.username} V1.3`);
 })
 
-schedule.scheduleJob('0 0 * * *', () => {
+schedule.scheduleJob('0 0 1 * *', () => {
     const date = new Date();
     const day = date.getDay();
+    console.log(day);
     switch (day){
         case 0:
             console.log("Sekmadienis")

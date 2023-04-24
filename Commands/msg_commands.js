@@ -5,7 +5,9 @@ function As(msg, client){
         msg.reply(`Labas, ${obj}, aš tėvas!`)
     }
     if(((msg.content).substring(0,2)).toUpperCase() == "AS"
-        && (msg.author.id) != (client.user.id)){
+        && (msg.author.id) != (client.user.id)
+        && !(msg.content).includes("@")
+        && msg.content != 'as'){
         obj = (msg.content).substring(2, (msg.content).length);
         msg.reply(`Labas, ${obj}, aš tėvas!`)
     }
