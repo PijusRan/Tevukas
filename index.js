@@ -41,28 +41,28 @@ schedule.scheduleJob('0 0 1 * *', () => {
             console.log("Sekmadienis")
             client.user.setActivity({
                 type: ActivityType.Listening,
-                name: "kunigo✝",
+                name: "kunigo ✝",
                 url: 'https://youtu.be/8gA8we0RI8U'
             });
         case 1:
             console.log("Pirmadienis")
             client.user.setActivity({
                 type: ActivityType.Playing,
-                name: "su rezultatais📈",
+                name: "su rezultatais 📈",
                 url: "https://www.youtube.com/watch?v=8gA8we0RI8U"
             });
         case 2:
             console.log("Antradienis")
             client.user.setActivity({
                 type: ActivityType.Playing,
-                name: "darbe⚒",
+                name: "darbe ⚒",
                 url: "https://www.youtube.com/watch?v=8gA8we0RI8U"
             });
         case 3:
             console.log("Treciadienis")
             client.user.setActivity({
                 type: ActivityType.Playing,
-                name: "su savim😏",
+                name: "su savim 😏",
                 url: "https://www.youtube.com/watch?v=8gA8we0RI8U"
             });
         case 4:
@@ -76,14 +76,14 @@ schedule.scheduleJob('0 0 1 * *', () => {
             console.log("Penktadienis")
             client.user.setActivity({
                 type: ActivityType.Listening,
-                name: "klubiake💿",
+                name: "klubiake 💿",
                 url: 'https://youtu.be/8gA8we0RI8U'
             });
         case 6:
             console.log("Sestadienis")
             client.user.setActivity({
                 type: ActivityType.Watching,
-                name: "žuvytes🐟",
+                name: "žuvytes 🐟",
                 url: 'https://youtu.be/8gA8we0RI8U'
             });
     }
