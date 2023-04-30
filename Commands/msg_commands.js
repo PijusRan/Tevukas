@@ -21,7 +21,7 @@ function Nerek(msg, client){
         (msg.content).substring(0,2) != "XD" &&
         (msg.content).length > 3 &&
         (msg.content).match(/[a-zA-Z]/g) &&
-        (msg.sontent).substring(0,1) != ':'
+        msg.sontent[0] != ':'
         ){
 
         msg.reply(`NERĖK K#RVA!`)

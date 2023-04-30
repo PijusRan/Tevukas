@@ -29,7 +29,7 @@ const player = new Player(client);
 //READY
 client.on('ready', (c) => {
     //console.log(client)
-    console.log(`${c.user.username} V1.3`);
+    console.log(`${c.user.username} V1.3.2`);
 })
 
 schedule.scheduleJob('0 0 1 * *', () => {
