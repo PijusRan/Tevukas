@@ -200,7 +200,6 @@ function topas(interaction){
                 const role = await interaction.guild.roles.fetch(roleid);
                 
                 const top_txt = fs.readFileSync('Commands/top_user.txt', 'utf8');
-
                 if(top_txt != arr[0].id){
                     let prev_member = await interaction.guild.members.fetch(top_txt);
                     let top_member = await interaction.guild.members.fetch(arr[0].id);
@@ -210,8 +209,6 @@ function topas(interaction){
 
                     await fs.writeFileSync('Commands/top_user.txt', arr[0].id);
                 }
-        
-                
             }
 
             if(arr.length >= 5){

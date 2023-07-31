@@ -29,13 +29,23 @@ const player = new Player(client);
 //READY
 client.on('ready', (c) => {
     //console.log(client)
-    console.log(`${c.user.username} V1.3.3`);
+    console.log(`${c.user.username} V1.3.4`);
+
+    client.user.setActivity({
+        type: ActivityType.Watching,
+        name: "žuvytes 🐟",
+        url: 'https://youtu.be/8gA8we0RI8U'
+    });
+
+    const job = schedule.scheduleJob('* * * * 0', function(){
+        let ts = Date.now();
+        let date = ts.getDate();
+
+        fs.writeFileSync('./Commands/Users.json', "{}");
+        console.log("Taškai perstatyti: " + date);
+    });
 })
-/*client.user.setActivity({
-    type: ActivityType.Watching,
-    name: "žuvytes 🐟",
-    url: 'https://youtu.be/8gA8we0RI8U'
-});*/
+
 
 
 //MESSAGES
