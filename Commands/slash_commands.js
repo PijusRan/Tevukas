@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {EmbedBuilder, GuildMember, ButtonBuilder, ActionRowBuilder, ButtonStyle} = require('discord.js');
+const {Client, EmbedBuilder, GuildMember, ButtonBuilder, ActionRowBuilder, ButtonStyle} = require('discord.js');
 
 function getRandomInt(min, max) {
     return Math.floor(
@@ -193,6 +193,26 @@ function topas(interaction){
         async function create_list(filter_members, get_username) {
             const arr = await sort_array(filter_members)
             let rep_s = '';
+
+            //BAZARAS ROLE
+            if(interaction.guildId == "702465538407923772"){
+                const roleid = "1134760397983977633";
+                const role = await interaction.guild.roles.fetch(roleid);
+                
+                const top_txt = fs.readFileSync('Commands/top_user.txt', 'utf8');
+
+                if(top_txt != arr[0].id){
+                    let prev_member = await interaction.guild.members.fetch(top_txt);
+                    let top_member = await interaction.guild.members.fetch(arr[0].id);
+
+                    prev_member.roles.remove(role).catch(console.error);
+                    top_member.roles.add(role).catch(console.error);
+
+                    await fs.writeFileSync('Commands/top_user.txt', arr[0].id);
+                }
+        
+                
+            }
 
             if(arr.length >= 5){
                 for(let i = 0; i < 5; i++){
