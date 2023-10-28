@@ -30,7 +30,9 @@ function Nerek(msg, client){
 
 function Didziuojuos(msg){
     if((msg.content).toLowerCase() == "frustas mldc"){
-        msg.reply("Aš didžiuojuosi tavim, sūnau.")
+        msg.reply({
+            files: ['./Commands/Users.json']
+        })
     }
 }
 

@@ -11,6 +11,7 @@ process.on('uncaughtException', function(error) {
 //KOMANDOS
 const SLASHcommands = require("./Commands/slash_commands");
 const MSGcommands = require("./Commands/msg_commands");
+const Blackjack = require("./Commands/blackjack")
 
 const fs = require('fs');
 
@@ -29,7 +30,7 @@ const player = new Player(client);
 //READY
 client.on('ready', (c) => {
     //console.log(client)
-    console.log(`${c.user.username} V1.3.4`);
+    console.log(`${c.user.username} V1.4.1`);
 
     client.user.setActivity({
         type: ActivityType.Watching,
@@ -37,13 +38,13 @@ client.on('ready', (c) => {
         url: 'https://youtu.be/8gA8we0RI8U'
     });
 
-    const job = schedule.scheduleJob('* * * * 0', function(){
+    /*const job = schedule.scheduleJob('* * * * 0', function(){
         let ts = Date.now();
         let date = ts.getDate();
 
         fs.writeFileSync('./Commands/Users.json', "{}");
         console.log("Taškai perstatyti: " + date);
-    });
+    });*/
 })
 
 
@@ -73,8 +74,8 @@ client.on('interactionCreate', (interaction) => {
         SLASHcommands.atsiboda(interaction);
         //REP_CHECk
         SLASHcommands.reputacij(interaction);
-        //PLS REP
-        SLASHcommands.pls_rep(interaction);
+        //BLACKJACK
+        Blackjack(client, interaction);
         //LEADERBOARD
         SLASHcommands.topas(interaction);
         //BALIUKAS

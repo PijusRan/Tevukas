@@ -66,20 +66,22 @@ function reputacij(interaction){
         }
         else{
            tag = interaction.member.user;
-           id= interaction.member.id;
+           id = interaction.member.id;
         }
-      if(!data[id]){
-          data[id] = 50;
+        if(!data[id]){
+            data[id] = 50;
         }
 
-       interaction.reply(`${tag} reputacij su tėvuku: ${data[id]} rep`)
-      fs.writeFileSync('./Commands/Users.json', JSON.stringify(data))
+        interaction.reply(`${tag} reputacij su tėvuku: ${data[id]} rep`)
+        fs.writeFileSync('./Commands/Users.json', JSON.stringify(data))
     } 
 }
 
 //PLS_REP
 function pls_rep(interaction){
-    if (interaction.commandName == "pls-rep"){
+    
+
+    /*if (interaction.commandName == "pls-rep"){
         const data = JSON.parse(fs.readFileSync('./Commands/Users.json'))
         const id = interaction.member.id;
 
@@ -135,7 +137,7 @@ function pls_rep(interaction){
 
         data[id] = rep;
         fs.writeFileSync('./Commands/Users.json', JSON.stringify(data))
-    }
+    }*/
 }
 
 //TOPAS
@@ -251,6 +253,7 @@ function topas(interaction){
 
 //BALIUKAS
 const {Player, useQueue, QueryTypem, useHistory} = require("discord-player")
+
 function music_embed(interaction){
     const queue = useQueue(interaction.guild.id);
 
@@ -282,6 +285,7 @@ function music_embed(interaction){
     return({embeds: [embed], components: [buttons]})
     
 }
+
 function baliukas(client, interaction, player, guild_name){
     if(interaction.commandName == 'baliukas'){
         async function play(interaction, YoutubeExtractor){

@@ -27,8 +27,14 @@ const commands = [
         }]
     },
     {
-        name: 'pls-rep',
-        description: 'Tėvuka, dok reputacijos'
+        name: 'juods-dzeks',
+        description: 'Tėvuka, dok reputacijos',
+        options: [{
+            name: 'statymas',
+            description: 'Kiek statai?',
+            type: ApplicationCommandOptionType.Integer,
+            required: true
+        }]
     },
     {
         name: 'topas',
